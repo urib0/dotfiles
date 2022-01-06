@@ -4,7 +4,9 @@ alias tm="tmux"
 #git
 alias g='git'
 alias gs='git status'
+alias gf='git fetch'
 alias gc='git checkout'
+alias ga='git add'
 alias gps='git push'
 alias gpl='git pull'
 
