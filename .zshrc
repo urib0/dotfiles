@@ -1,4 +1,4 @@
-alias ll="ls -lha"
+alias ll="ls -lhAF"
 alias tm="tmux"
 
 #git
