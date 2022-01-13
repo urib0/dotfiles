@@ -1,1 +1,18 @@
+set linenumbers
+set autoindent
 set tabsize 4
+set minibar
+set constantshow
+
+# syntax highlight
+#include "/usr/share/nano/*.nanorc"
+include "/usr/local/share/nano/*.nanorc"
+#include "~/.nano/*"
+#include "/usr/local/Cellar/nano/6.0/share/nano/json.nanorc"
+
+# Color　文字,背景
+set titlecolor white,gray
+set numbercolor white,gray
+set statuscolor white,gray
+set keycolor white,gray
+set functioncolor white,gray
