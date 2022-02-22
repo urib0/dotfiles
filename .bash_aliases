@@ -1,5 +1,7 @@
 alias ll="ls -lhAF"
+alias lls="ls -lhAFS"
 alias tm="tmux"
+alias python="python3"
 
 #git
 alias g='git'

@@ -2,7 +2,9 @@
 
 sudo printf ''
 
-echo 'alias ll="ls -lha"' >> ~/.bashrc
+cd /home/pi
+ln -s ./dotfiles/.bash_aliases .
+ln -s ./dotfiles/.tmux.conf .
 
 echo 'XKBOPTIONS="ctrl:nocaps"' |sudo tee -a /etc/default/keyboard > /dev/null
 
