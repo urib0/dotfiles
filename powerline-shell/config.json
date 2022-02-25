@@ -1,11 +1,25 @@
 {
   "segments": [
     "virtual_env",
+    "time",
     "ssh",
     "cwd",
     "git",
-    "hg",
+    "git_stash",
     "jobs",
+    "newline",
     "root"
-  ]
-}
+  ],
+  "time": {
+    "format": "%m/%d %H:%M:%S"
+  },
+  "cwd": {
+    "mode": "dironly",
+    "mode": "plain"
+  },
+  "theme": "basic",
+  "theme": "default",
+  "theme": "solarized_light",
+  "theme": "washed",
+  "theme": "gruvbox"
+  }
