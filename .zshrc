@@ -3,13 +3,14 @@ alias tm="tmux"
 
 #git
 alias g='git'
+alias ga='git add'
 alias gb='git branch -a'
-alias gr="git remote -v"
-alias gs='git status'
-alias gf='git fetch'
 alias gc='git commit -m'
 alias gd='git diff'
-alias ga='git add'
+alias gf='git fetch'
+alias gr="git remote -v"
+alias gs='git status'
+alias gl='git log'
 alias gps='git push'
 alias gpl='git pull'
 
