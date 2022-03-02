@@ -5,10 +5,7 @@ set minibar
 set constantshow
 
 # syntax highlight
-#include "/usr/share/nano/*.nanorc"
-include "/usr/local/share/nano/*.nanorc"
-#include "~/.nano/*"
-#include "/usr/local/Cellar/nano/6.0/share/nano/json.nanorc"
+include "~/dotfiles/resources/nanorc/*.nanorc"
 
 # Color　文字,背景
 set titlecolor white,gray
