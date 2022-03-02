@@ -1,0 +1,2 @@
+git@github.com:urib0/nanorc.git
+
