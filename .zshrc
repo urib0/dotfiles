@@ -37,4 +37,6 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_all_dups
 
-export PATH=$PATH:/Users/inotatsu/work/00_mkej/0_rep/mkefw_auto_reloader
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
