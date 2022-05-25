@@ -18,6 +18,7 @@ fi
 
 alias ll="ls -lhAF"
 alias tm="tmux"
+alias activate=". venv/bin/activate"
 
 #git
 alias g='git'
