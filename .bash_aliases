@@ -3,6 +3,7 @@ alias lls="ls -lhAFS"
 alias tm="tmux"
 alias python="python3"
 alias open="xdg-open"
+alias nano="nano -m"
 
 #git
 alias g='git'
