@@ -17,5 +17,6 @@ alias gf='git fetch'
 alias gr="git remote -v"
 alias gs='git status'
 alias gl='git log'
+alias gm='git merge'
 alias gps='git push'
 alias gpl='git pull'
