@@ -31,6 +31,8 @@ cd -
 echo "STATE_3 install packages"
 sudo apt install -y git
 sudo apt install -y tmux
+sudo apt install -y avahi-daemon
+sudo apt install -y openssh-server
 
 echo "STATE_4 some settings"
 echo 'XKBOPTIONS="ctrl:nocaps"' |sudo tee -a /etc/default/keyboard > /dev/null
