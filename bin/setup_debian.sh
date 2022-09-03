@@ -13,15 +13,19 @@ exec 2>>$LOG_OUT
 
 sudo printf ''
 
+echo "STATE_1 apt upgrade"
 sudo apt update
 sudo apt upgrade -y
-sudo apt autoremove
+sudo apt autoremove -y
 
+echo "STATE_2 create symbolic link"
 cd ~
 ln -s ./dotfiles/.bash_aliases .
 ln -s ./dotfiles/.tmux.conf .
+cd -
 
 echo 'XKBOPTIONS="ctrl:nocaps"' |sudo tee -a /etc/default/keyboard > /dev/null
 
+echo "STATE_3 install packages"
 sudo apt install -y git
 sudo apt install -y tmux
