@@ -29,6 +29,7 @@ fi
 cd -
 
 echo "STATE_3 install packages"
+sudo apt install -y htop
 sudo apt install -y git
 sudo apt install -y tmux
 sudo apt install -y avahi-daemon
