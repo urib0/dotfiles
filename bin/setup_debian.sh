@@ -35,6 +35,9 @@ sudo apt install -y tmux
 sudo apt install -y avahi-daemon
 sudo apt install -y openssh-server
 
-echo "STATE_4 some settings"
+echo "STATE_4 install pyenv"
+./setup_debian_pyenv.sh
+
+echo "STATE_5 some settings"
 echo 'XKBOPTIONS="ctrl:nocaps"' |sudo tee -a /etc/default/keyboard > /dev/null
 
