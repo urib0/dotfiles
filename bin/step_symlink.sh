@@ -18,4 +18,5 @@ if ! [ -d ".config/powerline-shell" ]; then
   ln -s ~/dotfiles/powerline-shell/config.json .
   cd ~
 fi
+source .bash_profile
 cd $HOMEDIR
