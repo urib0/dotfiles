@@ -8,6 +8,7 @@ if [ -v PYENV_ROOT ]; then
   pip install --upgrade pip
   pip install powerline-shell
   pip install wheel
+  pip install icdiff
 else
   echo "PYENV_ROOT is not defined"
 fi
