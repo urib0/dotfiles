@@ -1,3 +1,4 @@
+HOMEDIR=$(pwd)
 cd ~
 if ! [ -f ".bash_aliases" ]; then
   ln -s ./dotfiles/.bash_aliases .
@@ -11,4 +12,10 @@ fi
 if ! [ -f ".tmux.conf" ]; then
   ln -s ./dotfiles/.tmux.conf .
 fi
-cd -
+if ! [ -d ".config/powerline-shell" ]; then
+  mkdir .config/powerline-shell
+  cd .config/powerline-shell
+  ln -s ~/dotfiles/powerline-shell/config.json .
+  cd ~
+fi
+cd $HOMEDIR
