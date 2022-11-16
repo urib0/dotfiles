@@ -13,7 +13,7 @@ if ! [ -f ".tmux.conf" ]; then
   ln -s ./dotfiles/.tmux.conf .
 fi
 if ! [ -d ".config/powerline-shell" ]; then
-  mkdir .config/powerline-shell
+  mkdir -p .config/powerline-shell
   cd .config/powerline-shell
   ln -s ~/dotfiles/powerline-shell/config.json .
   cd ~
