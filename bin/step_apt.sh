@@ -1,4 +1,4 @@
-sudo apt update
+sudo apt update --allow-releaseinfo-change
 sudo apt upgrade -y
 sudo apt install -y git
 sudo apt install -y cmake
