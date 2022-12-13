@@ -28,3 +28,5 @@ if [ -L ~/.aliases ]; then
   . ~/.aliases
 fi
 
+
+export PATH="$HOME/bin/:$PATH"
