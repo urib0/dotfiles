@@ -30,3 +30,5 @@ fi
 
 
 export PATH="$HOME/bin/:$PATH"
+
+autoload -Uz compinit && compinit -u
