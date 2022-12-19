@@ -1,5 +1,6 @@
 sudo apt update --allow-releaseinfo-change
 sudo apt upgrade -y
+sudo apt install -y htop
 sudo apt install -y zip
 sudo apt install -y git
 sudo apt install -y cmake
