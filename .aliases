@@ -1,4 +1,5 @@
-alias ll="ls -lhAF"
+alias ll="ls -lhF"
+alias lla="ls -lhAF"
 alias lls="ls -lhAFS"
 alias tm="tmux"
 alias activate=". .venv/bin/activate"
