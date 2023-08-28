@@ -17,6 +17,7 @@ alias gf='git fetch'
 alias gl='git log --pretty="format:%C(yellow)%h %C(green)%ci %C(cyan)[%an] %C(reset)%s"'
 alias glg='gl --all --graph'
 alias gm='git merge'
+alias gmv='git mv'
 alias gps='git push'
 alias gpl='git pull'
 alias gr="git remote -v"
