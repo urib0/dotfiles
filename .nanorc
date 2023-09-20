@@ -3,6 +3,7 @@ set autoindent
 set tabsize 4
 set minibar
 set constantshow
+set mouse
 
 # syntax highlight
 include "~/dotfiles/resources/nanorc/*.nanorc"
