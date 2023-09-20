@@ -12,6 +12,9 @@ fi
 if ! [ -f ".tmux.conf" ]; then
   ln -s ./dotfiles/.tmux.conf .
 fi
+if ! [ -f ".nanorc" ]; then
+  ln -s ./dotfiles/.nanorc .
+fi
 if ! [ -d ".config/powerline-shell" ]; then
   mkdir -p .config/powerline-shell
   cd .config/powerline-shell
