@@ -10,4 +10,5 @@ sudo apt install -y avahi-daemon
 sudo apt install -y openssh-server
 sudo apt install -y screen
 sudo apt install -y wakeonlan
+sudo apt install -y xsel
 sudo apt autoremove -y
