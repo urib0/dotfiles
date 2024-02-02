@@ -3,7 +3,7 @@ alias lla="ls -lhAF"
 alias lls="ls -lhAFS"
 alias tm="tmux"
 alias activate=". .venv/bin/activate"
-
+alias clip='xsel --clipboard --input'
 
 #git
 alias g='git'
