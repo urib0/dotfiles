@@ -1,6 +1,7 @@
 alias ll="ls -lhF"
 alias lla="ls -lhAF"
 alias lls="ls -lhAFS"
+alias ccl="cd;clear"
 alias tm="tmux"
 alias activate=". .venv/bin/activate"
 alias clip='xsel --clipboard --input'
