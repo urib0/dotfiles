@@ -1,3 +1,5 @@
+echo "open .bash_profile!"
+
 function _update_ps1() {
 #  PS1=$(/home/ubuntu/.local/bin/powerline-shell $?)
   PS1=$(powerline-shell $?)
