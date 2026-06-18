@@ -32,3 +32,8 @@ fi
 export PATH="$HOME/bin/:$PATH"
 
 autoload -Uz compinit && compinit -u
+
+# Machine-local settings (not tracked in dotfiles)
+if [ -f ~/.zshrc.local ]; then
+  . ~/.zshrc.local
+fi
