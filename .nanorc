@@ -5,6 +5,7 @@ set minibar
 set tabstospaces
 set constantshow
 set mouse
+set nonewlines
 
 # syntax highlight
 include "~/dotfiles/resources/nanorc/*.nanorc"
@@ -15,3 +16,4 @@ set numbercolor white,gray
 set statuscolor white,gray
 set keycolor white,gray
 set functioncolor white,gray
+set softwrap
