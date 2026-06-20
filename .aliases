@@ -1,5 +1,4 @@
-echo "open .aliases!"
-
+echo "!!!!!!!!!!!!!!!!!!!!read from .aliases"
 
 alias ll="ls -lhF"
 alias lla="ls -lhAF"

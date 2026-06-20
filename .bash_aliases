@@ -1,4 +1,4 @@
-echo "open .bash_aliases!"
+echo "!!!!!!!!!!!!!!!!!!!!read from .bash_aliases"
 
 alias python="python3"
 alias open="xdg-open"

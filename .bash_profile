@@ -1,4 +1,4 @@
-echo "open .bash_profile!"
+echo "!!!!!!!!!!!!!!!!!!!!read from .bash_profile"
 
 function _update_ps1() {
 #  PS1=$(/home/ubuntu/.local/bin/powerline-shell $?)
@@ -16,5 +16,10 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# OpenClaw Completion
+[ -f "/home/ubuntu/.openclaw/completions/openclaw.bash" ] && source "/home/ubuntu/.openclaw/completions/openclaw.bash"
+export PATH="$HOME/.openclaw/bin:$PATH"
+export PATH="$(npm prefix -g)/bin:$PATH"
 
 . .aliases
