@@ -55,3 +55,6 @@ rm() {
         echo "rm: オプションは無視されました。対象ファイルが指定されていません。"
     fi
 }
+
+# direnv
+eval "$(direnv hook zsh)"
