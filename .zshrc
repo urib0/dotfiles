@@ -37,3 +37,21 @@ autoload -Uz compinit && compinit -u
 if [ -f ~/.zshrc.local ]; then
   . ~/.zshrc.local
 fi
+
+# rmをゴミ箱（trash）に置き換える
+rm() {
+    local args=()
+    for arg in "$@"; do
+        # ハイフンで始まるオプション（-rf, -f, -rなど）を除外してファイル名だけを抽出
+        if [[ "$arg" != -* ]]; then
+            args+=("$arg")
+        fi
+    done
+    
+    if [ ${#args[@]} -gt 0 ]; then
+        # Finderのゴミ箱に移動
+        command trash "${args[@]}"
+    else
+        echo "rm: オプションは無視されました。対象ファイルが指定されていません。"
+    fi
+}
