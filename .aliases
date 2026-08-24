@@ -7,6 +7,7 @@ alias ccl="cd;clear"
 alias tm="tmux"
 alias activate=". .venv/bin/activate"
 alias clip='xsel --clipboard --input'
+alias glow='glow -w $COLUMNS'
 
 #git
 alias g='git'
@@ -27,5 +28,6 @@ alias gpl='git pull'
 alias gr="git remote -v"
 alias grm="git rm"
 alias gs='git status'
+alias gsh='git show --stat'
 
 #alias awsume="source _awsume"
