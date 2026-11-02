@@ -2,6 +2,7 @@
 
 [aws]
 symbol = " "
+disabled = true
 
 [buf]
 symbol = " "
@@ -80,6 +81,7 @@ symbol = " "
 
 [hostname]
 ssh_symbol = " "
+ssh_only = false
 
 [java]
 symbol = " "
@@ -203,3 +205,6 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[username]
+show_always = true
