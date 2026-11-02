@@ -1,5 +1,8 @@
+# pyenv shim経由だとプロジェクトの.python-versionに依存して見つからなくなるため実体を直指定
+POWERLINE_SHELL_BIN="$HOME/.pyenv/versions/3.12.2/bin/powerline-shell"
+
 function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
+    PS1="$("$POWERLINE_SHELL_BIN" --shell zsh $?)"
 }
 
 function install_powerline_precmd() {
@@ -11,7 +14,10 @@ function install_powerline_precmd() {
   precmd_functions+=(powerline_precmd)
 }
 
-if [ "$TERM" != "linux" ]; then
+# starshipがあれば優先し、無いマシンではpowerline-shellにフォールバック
+if command -v starship >/dev/null; then
+    eval "$(starship init zsh)"
+elif [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 
