@@ -1,34 +1,13 @@
-# pyenv shim経由だとプロジェクトの.python-versionに依存して見つからなくなるため実体を直指定
-POWERLINE_SHELL_BIN="$HOME/.pyenv/versions/3.12.2/bin/powerline-shell"
-
-function powerline_precmd() {
-    PS1="$("$POWERLINE_SHELL_BIN" --shell zsh $?)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-# starshipがあれば優先し、無いマシンではpowerline-shellにフォールバック
+# プロンプト
 if command -v starship >/dev/null; then
     eval "$(starship init zsh)"
-elif [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
 fi
 
-setopt hist_ignore_dups
-export HISTSIZE=1000
+# 履歴設定（zsh-autosuggestions の候補元にもなる）
+HISTFILE=~/.zsh_history
+export HISTSIZE=100000
 export SAVEHIST=100000
-setopt hist_ignore_all_dups
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+setopt share_history hist_ignore_all_dups hist_reduce_blanks
 
 if [ -L ~/.aliases ]; then
   . ~/.aliases
@@ -53,7 +32,7 @@ rm() {
             args+=("$arg")
         fi
     done
-    
+
     if [ ${#args[@]} -gt 0 ]; then
         # Finderのゴミ箱に移動
         command trash "${args[@]}"
@@ -63,4 +42,19 @@ rm() {
 }
 
 # direnv
-eval "$(direnv hook zsh)"
+if command -v direnv >/dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
+# zsh-autosuggestions（Homebrew / Debian のどちらのパスでも読み込む）
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+for f in \
+  /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh \
+  /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh \
+  /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh; do
+  if [ -f "$f" ]; then
+    source "$f"
+    break
+  fi
+done
+unset f
